@@ -9,7 +9,7 @@ namespace DatabasLab1.Models
 		// Konstruktor utan parametrar – sätter standardvärden
         public Restaurant()
         {
-            RestaurantName = "Unknownestaurant";
+            RestaurantName = "UnknownRestaurant";
             City = "UnknownCity";
         }
 

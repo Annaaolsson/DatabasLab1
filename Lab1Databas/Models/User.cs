@@ -8,8 +8,8 @@ namespace DatabasLab1.Models
 
         public User()
         {
-            Firstname = "Unknown";
-            Lastname = "User";
+            Firstname = "Unknown FirstName";
+            Lastname = "Unknown LastName";
         }
 
         public User(int userId, string firstname, string lastname)
