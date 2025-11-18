@@ -1,0 +1,32 @@
+@model IEnumerable<DatabasLab1.Models.ReviewViewModel>
+
+@{
+    ViewData["Title"] = "Reviews";
+}
+
+<h1>Reviews</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Review ID</th>
+            <th>User</th>
+            <th>Restaurant</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ReviewId</td>
+            <td>@item.UserName</td>
+            <td>@item.RestaurantName</td>
+            <td>@item.Rating</td>
+        </tr>
+    }
+    </tbody>
+</table>
