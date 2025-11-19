@@ -18,6 +18,11 @@ namespace DatabasLab1.Controllers
 		{
 			ViewBag.Count = userList.Count;
 
+			if(HttpContext.Session.GetString("UserName") == null)
+			{
+				return RedirectToAction("Login", "Home");
+			}
+
 			return View(userList);
 		}
 

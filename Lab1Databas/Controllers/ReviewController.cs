@@ -36,7 +36,12 @@ namespace DatabasLab1.Controllers
 
 		public IActionResult Reviews()
         {
-            // Bygg om varje ReviewModel → ReviewViewModel
+            if(HttpContext.Session.GetString("UserName") == null)
+			{
+				return RedirectToAction("Login", "Home");
+			}
+			
+			// Bygg om varje ReviewModel → ReviewViewModel
             var viewModelList = reviewList
                 .Select(r =>
                 {

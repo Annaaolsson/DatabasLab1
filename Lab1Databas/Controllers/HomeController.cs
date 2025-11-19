@@ -20,6 +20,8 @@ public class HomeController : Controller
 	{
 		if(login.UserName == "Anna" && login.Password == "Anna")
 		{
+			HttpContext.Session.SetString("UserName", login.UserName);
+			
 			return RedirectToAction("Index");
 		}
 
@@ -35,12 +37,22 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        if(HttpContext.Session.GetString("UserName") == null)
+		{
+			return RedirectToAction("Login", "Home");
+		}
+		
+		return View();
     }
 
     public IActionResult Privacy()
     {
-        return View();
+        if(HttpContext.Session.GetString("UserName") == null)
+		{
+			return RedirectToAction("Login", "Home");
+		}
+		
+		return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
