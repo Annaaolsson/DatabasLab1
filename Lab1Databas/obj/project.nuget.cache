@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TXTeW2OH7hw=",
+  "dgSpecHash": "VT7DVL5FEqk=",
   "success": true,
   "projectFilePath": "/Users/annao/Databas/Lab1Databas/Lab1Databas/Lab1Databas.csproj",
   "expectedPackageFiles": [
@@ -83,7 +83,7 @@
     "/Users/annao/.nuget/packages/microsoft.visualstudio.web.codegeneration.utils/9.0.0/microsoft.visualstudio.web.codegeneration.utils.9.0.0.nupkg.sha512",
     "/Users/annao/.nuget/packages/microsoft.visualstudio.web.codegenerators.mvc/9.0.0/microsoft.visualstudio.web.codegenerators.mvc.9.0.0.nupkg.sha512",
     "/Users/annao/.nuget/packages/mono.texttemplating/3.0.0/mono.texttemplating.3.0.0.nupkg.sha512",
-    "/Users/annao/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/annao/.nuget/packages/newtonsoft.json/13.0.4/newtonsoft.json.13.0.4.nupkg.sha512",
     "/Users/annao/.nuget/packages/nuget.common/6.11.0/nuget.common.6.11.0.nupkg.sha512",
     "/Users/annao/.nuget/packages/nuget.configuration/6.11.0/nuget.configuration.6.11.0.nupkg.sha512",
     "/Users/annao/.nuget/packages/nuget.dependencyresolver.core/6.11.0/nuget.dependencyresolver.core.6.11.0.nupkg.sha512",

@@ -1,0 +1,16 @@
+@model DatabasLab1.Models.UserModel
+
+<h2>Delete User</h2>
+
+<p>Är du säker på att du vill ta bort den här användaren?</p>
+
+<ul>
+    <li><strong>ID:</strong> @Model.UserId</li>
+    <li><strong>Namn:</strong> @Model.FirstName @Model.LastName</li>
+</ul>
+
+<form asp-action="DeleteUserConfirmed" method="post">
+    <input type="hidden" name="UserId" value="@Model.UserId" />
+    <button type="submit">Ja, ta bort</button>
+    <a asp-action="Users">Avbryt</a>
+</form>
