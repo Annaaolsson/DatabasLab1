@@ -36,6 +36,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/annao/Databas/Lab1Databas/Lab1Databas/Views/Restaurant/AddRestaurant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdGF1cmFudC9BZGRSZXN0YXVyYW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/annao/Databas/Lab1Databas/Lab1Databas/Views/Restaurant/DeleteRestaurant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdGF1cmFudC9EZWxldGVSZXN0YXVyYW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/annao/Databas/Lab1Databas/Lab1Databas/Views/Restaurant/EditRestaurant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdGF1cmFudC9FZGl0UmVzdGF1cmFudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/annao/Databas/Lab1Databas/Lab1Databas/Views/Restaurant/Restaurants.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdGF1cmFudC9SZXN0YXVyYW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

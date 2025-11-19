@@ -1,0 +1,16 @@
+@model DatabasLab1.Models.RestaurantModel
+
+<h2>Delete Restaurant</h2>
+
+<p>Är du säker på att du vill ta bort den här användaren?</p>
+
+<ul>
+    <li><strong>ID:</strong> @Model.RestaurantId</li>
+    <li><strong>Namn:</strong> @Model.RestaurantName @Model.City</li>
+</ul>
+
+<form asp-action="DeleteRestaurantConfirmed" method="post">
+    <input type="hidden" name="RestaurantId" value="@Model.RestaurantId" />
+    <button type="submit">Ja, ta bort</button>
+    <a asp-action="Restaurant">Avbryt</a>
+</form>
