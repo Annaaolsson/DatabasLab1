@@ -18,6 +18,11 @@ public class HomeController : Controller
 	[HttpPost]
 	public IActionResult Login(LoginModel login)
 	{
+		if (!ModelState.IsValid)
+		{
+			return View(login);
+		}
+		
 		if(login.UserName == "Anna" && login.Password == "Anna")
 		{
 			HttpContext.Session.SetString("UserName", login.UserName);

@@ -17,6 +17,8 @@ namespace DatabasLab1.Controllers
 
 		public IActionResult Restaurants()
 		{
+			ViewData["RestaurantCount"] = restaurantList.Count;
+			
 			if(HttpContext.Session.GetString("UserName") == null)
 			{
 				return RedirectToAction("Login", "Home");
