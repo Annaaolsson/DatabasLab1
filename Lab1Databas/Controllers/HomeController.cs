@@ -1,12 +1,32 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Lab1Databas.Models;
+using DatabasLab1.Models;
 
 namespace Lab1Databas.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    static List<LoginModel> LoginList = new List<LoginModel>();
+
+	[HttpGet]
+	public IActionResult Login()
+	{
+		return View();
+	}
+
+	[HttpPost]
+	public IActionResult Login(LoginModel login)
+	{
+		if(login.UserName == "Anna" && login.Password == "Anna")
+		{
+			return RedirectToAction("Index");
+		}
+
+		return View("Login", login);
+	}
+	
+	private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
     {
