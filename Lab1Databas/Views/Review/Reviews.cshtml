@@ -26,6 +26,9 @@
             <td>@item.UserName</td>
             <td>@item.RestaurantName</td>
             <td>@item.Rating</td>
+			<td>
+				@Html.ActionLink("Edit", "EditReview", new { reviewId = item.ReviewId })
+			</td>
         </tr>
     }
     </tbody>

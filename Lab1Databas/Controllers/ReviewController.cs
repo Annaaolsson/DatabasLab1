@@ -59,6 +59,49 @@ namespace DatabasLab1.Controllers
                 .ToList();
 
             return View(viewModelList);
-        }
+		}
+
+		[HttpGet]
+		public IActionResult EditReview(int reviewId)
+		{
+			var review = reviewList.FirstOrDefault(r => r.ReviewId == reviewId);
+			if (review == null)
+			{
+				return NotFound();
+			}
+
+			var user = userList.FirstOrDefault(u => u.UserId == review.UserId);
+			var restaurant = restaurantList.FirstOrDefault(r => r.RestaurantId == review.RestaurantId);
+
+			var vm = new ReviewViewModel
+			{
+				ReviewId = review.ReviewId,
+				UserName = user != null ? $"{user.FirstName} {user.LastName}" : "",
+				RestaurantName = restaurant != null ? restaurant.RestaurantName : "",
+				Rating = review.Rating
+			};
+
+			return View(vm);
+		}
+
+
+		[HttpPost]
+		public IActionResult EditReview(ReviewViewModel model)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View(model);
+			}
+
+			var review = reviewList.FirstOrDefault(r => r.ReviewId == model.ReviewId);
+			if (review == null)
+			{
+				return NotFound();
+			}
+
+			review.Rating = model.Rating;
+
+			return RedirectToAction("Reviews");
+		}
 	}
 }

@@ -56,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdGF1cmFudC9SZXN0YXVyYW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/annao/Databas/Lab1Databas/Lab1Databas/Views/Review/EditReview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3L0VkaXRSZXZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/annao/Databas/Lab1Databas/Lab1Databas/Views/Review/Reviews.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3L1Jldmlld3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
