@@ -1,0 +1,18 @@
+@model DatabasLab1.Models.ReviewViewModel
+
+<h2>Delete review</h2>
+
+<p>Är du säker på att du vill ta bort denna recension?</p>
+
+<ul>
+    <li><strong>ID:</strong> @Model.ReviewId</li>
+    <li><strong>Användare:</strong> @Model.UserName</li>
+    <li><strong>Restaurang:</strong> @Model.RestaurantName</li>
+    <li><strong>Betyg:</strong> @Model.Rating</li>
+</ul>
+
+<form asp-action="DeleteReviewConfirmed" method="post">
+    <input type="hidden" name="reviewId" value="@Model.ReviewId" />
+    <button type="submit">Ja, ta bort</button>
+    <a asp-action="Reviews">Avbryt</a>
+</form>

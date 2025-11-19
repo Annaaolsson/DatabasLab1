@@ -81,6 +81,8 @@ namespace DatabasLab1.Controllers
 				Rating = review.Rating
 			};
 
+			ViewBag.RatingOptions = new List<int> { 1, 2, 3, 4, 5 };
+
 			return View(vm);
 		}
 
@@ -90,6 +92,7 @@ namespace DatabasLab1.Controllers
 		{
 			if (!ModelState.IsValid)
 			{
+				ViewBag.RatingOptions = new List<int> { 1, 2, 3, 4, 5 };
 				return View(model);
 			}
 
@@ -100,6 +103,42 @@ namespace DatabasLab1.Controllers
 			}
 
 			review.Rating = model.Rating;
+
+			return RedirectToAction("Reviews");
+		}
+
+		[HttpGet]
+		public IActionResult DeleteReview(int reviewId)
+		{
+			var review = reviewList.FirstOrDefault(r => r.ReviewId == reviewId);
+			if (review == null)
+			{
+				return NotFound();
+			}
+
+			var user = userList.FirstOrDefault(u => u.UserId == review.UserId);
+			var restaurant = restaurantList.FirstOrDefault(r => r.RestaurantId == review.RestaurantId);
+
+			// Visa en liten vymodell för att bekräfta vad som tas bort
+			var vm = new ReviewViewModel
+			{
+				ReviewId = review.ReviewId,
+				UserName = user != null ? $"{user.FirstName} {user.LastName}" : "Okänd",
+				RestaurantName = restaurant != null ? restaurant.RestaurantName : "Okänd",
+				Rating = review.Rating
+			};
+
+			return View(vm);
+		}
+
+		[HttpPost]
+		public IActionResult DeleteReviewConfirmed(int reviewId)
+		{
+			var review = reviewList.FirstOrDefault(r => r.ReviewId == reviewId);
+			if (review != null)
+			{
+				reviewList.Remove(review);
+			}
 
 			return RedirectToAction("Reviews");
 		}

@@ -6,9 +6,6 @@
 
 <h1>Reviews</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -27,7 +24,8 @@
             <td>@item.RestaurantName</td>
             <td>@item.Rating</td>
 			<td>
-				@Html.ActionLink("Edit", "EditReview", new { reviewId = item.ReviewId })
+				@Html.ActionLink("Edit", "EditReview", new { reviewId = item.ReviewId }) |
+				@Html.ActionLink("Delete", "DeleteReview", new { reviewId = item.ReviewId })
 			</td>
         </tr>
     }
